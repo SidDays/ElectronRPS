@@ -1,0 +1,14 @@
+{
+  "name": "electron-sample-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Siddhesh Rajiv Karekar",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.7"
+  }
+}
