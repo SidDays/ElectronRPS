@@ -27,7 +27,9 @@ function createWindow() {
       label: "Game",
       submenu: [
         { label: "New Game" },
-        { label: "Quit Game" }
+        { label: "Quit Game", click() {
+          app.quit();
+        } }
       ]
     }
   ])
