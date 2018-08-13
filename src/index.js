@@ -60,6 +60,18 @@ document.querySelectorAll(".buttons button").forEach((button) => {
 
         document.getElementById("myMove").innerText = myMove;
         document.getElementById("aiMove").innerText = aiMove;
+
+        let winPlayer = winner(myMove, aiMove);
+        if (winPlayer == 1) {
+            myScore++;
+            flashHighlight(myScoreDisplay);
+
+        } else if (winPlayer == -1) {
+            aiScore++;
+            flashHighlight(aiScoreDisplay);
+        }
+
+        setTimeout(updateScoreDisplay, 300);
     })
 });
 
