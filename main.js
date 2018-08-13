@@ -1,11 +1,20 @@
-const { app, BrowserWindow, shell, Menu } = require('electron')
+const { app, BrowserWindow, shell, Menu, ipcMain } = require('electron')
 
 // Enable live reload for all the files inside your project directory
 require('electron-reload')(__dirname)
 
+global.score = {
+    ai: 0,
+    me: 0
+}
+
+// ipcMain.on('show-prop1', function(event) {
+//     console.log(global.sharedObj.prop1);
+//   });
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win
+let win 
 
 function createWindow() {
     // Create the browser window.
@@ -29,7 +38,10 @@ function createWindow() {
         {
             label: "Game",
             submenu: [
-                { label: "New Game" },
+                { label: "New Game", click() {
+                    app.relaunch()
+                    app.exit()
+                } },
                 { type: 'separator' },
                 {
                     label: "Exit", click() {
