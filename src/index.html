@@ -11,21 +11,25 @@
   <main class="container">
     <h1 class="title">Rock Paper Scissors</h1>
 
+    <p>You played <span class="move" id="myMove">nothing</span>, and the computer played <span class="move" id="aiMove">nothing yet </span>.</p>
+
     <table class="scores">
       <tr>
         <th>Your Score</th>
         <th>Computer Score</th>
       </tr>
       <tr>
-        <td>n/a</td>
-        <td>n/a</td>
+        <td id="myScore">n/a</td>
+        <td id="aiScore">n/a</td>
       </tr>
     </table>
 
     <div class="buttons">
-      <button>Rock</button>
-      <button>Paper</button>
-      <button>Scissors</button>
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
     </div>
   </main>
+
+  <script src="./index.js"></script>
 </html>

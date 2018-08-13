@@ -11,10 +11,17 @@ body, html {
 }
 
 .container {
+    width: 60%;
+    height: 60%;
     background-color: white;
     margin: auto;
     padding: 30px 50px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.move {
+    font-weight: bold;
+    color: #653f87;
 }
 
 .title {
@@ -54,5 +61,11 @@ body, html {
         border: 0;
         border-radius: 500px;
         padding: 8px;
+        transition-property: all;
+        transition-duration: 0.25s;
+
+        &:hover {
+            background: linear-gradient(to bottom,#221d53 1%,#8a57a4 100%);
+        }
     }
 }
