@@ -1,8 +1,8 @@
 body {
-    font-family: Roboto, BlinkMacSystemFont, -apple-system, sans-serif;
+    font-family: 'Manrope', BlinkMacSystemFont, -apple-system, sans-serif;
     text-align: center;
     margin: 0;
-    background-color: lavender;
+    background: linear-gradient(45deg,#221d53 0%,#221d53 30%,#653f87 73%,#653f87 100%);
 }
 
 body, html {
@@ -13,13 +13,12 @@ body, html {
 .container {
     background-color: white;
     margin: auto;
-    border-radius: 15px;
     padding: 30px 50px;
-    box-shadow: 5px 5px 5px darkgray;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
 }
 
 .title {
-    color: darkred;
+    color: #d3308a;
 }
 
 .scores {
@@ -27,8 +26,8 @@ body, html {
     margin: 50px 0;
 
     th {
-        color: darkslateblue;
-        font-style: italic;
+        color: #221d53;
+        letter-spacing: 1px;
     }
     
     td {
@@ -48,10 +47,12 @@ body, html {
     button {
         width: 30%;
         font-family: inherit;
-        background: slategrey;
+        background: linear-gradient(to bottom,#ea3d97 1%,#8a57a4 100%);
         color: white;
+        letter-spacing: 1px;
+        font-weight: 700;
         border: 0;
-        border-radius: 5px;
-        padding: 5px;
+        border-radius: 500px;
+        padding: 8px;
     }
 }
