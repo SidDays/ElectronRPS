@@ -27,17 +27,22 @@ function createWindow() {
       label: "Game",
       submenu: [
         { label: "New Game" },
-        { label: "Quit Game", click() {
-          app.quit();
-        } }
+        { type: 'separator' },
+        {
+          label: "Exit", click() {
+            app.quit();
+          }
+        }
       ]
     },
     {
       label: "Help",
       submenu: [
-        { label: "About", click() {
-          shell.openExternal('https://www.sidrk.com')
-        }}
+        {
+          label: "About", click() {
+            shell.openExternal('https://www.sidrk.com')
+          }
+        }
       ]
     }
   ])
