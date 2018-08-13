@@ -9,6 +9,7 @@
   "author": "Siddhesh Rajiv Karekar",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^2.0.7"
+    "electron": "^2.0.7",
+    "electron-reload": "^1.2.5"
   }
 }
