@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, shell, Menu } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -30,6 +30,14 @@ function createWindow() {
         { label: "Quit Game", click() {
           app.quit();
         } }
+      ]
+    },
+    {
+      label: "Help",
+      submenu: [
+        { label: "About", click() {
+          shell.openExternal('https://www.sidrk.com')
+        }}
       ]
     }
   ])
