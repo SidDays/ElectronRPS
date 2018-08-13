@@ -1,14 +1,23 @@
+const { remote } = require("electron");
 const myScoreDisplay = document.getElementById("myScore");
 const aiScoreDisplay = document.getElementById("aiScore");
-let myScore = 0;
-let aiScore = 0;
+// let myScore = 0;
+// let aiScore = 0;
+
+function setScore(player, score) {
+    remote.getGlobal("score")[player] = score;
+}
+
+function getScore(player, score) {
+    return remote.getGlobal("score")[player];
+}
 
 /**
  * Updates UI with actual score values.
  */
 function updateScoreDisplay() {
-    myScoreDisplay.innerText = myScore;
-    aiScoreDisplay.innerText = aiScore;
+    myScoreDisplay.innerText = remote.getGlobal("score")["me"];
+    aiScoreDisplay.innerText = remote.getGlobal("score")["ai"];
 }
 
 updateScoreDisplay();
@@ -64,12 +73,12 @@ document.querySelectorAll(".buttons button").forEach((button) => {
 
         let winPlayer = winner(myMove, aiMove);
         if (winPlayer == 1) {
-            myScore++;
+            setScore("me", getScore("me") +1);
             flashHighlight(myScoreDisplay);
             statusDisplay.innerText = ("You won this round!");
 
         } else if (winPlayer == -1) {
-            aiScore++;
+            setScore("ai", getScore("ai") +1);
             flashHighlight(aiScoreDisplay);
             statusDisplay.innerText = ("You lost this round...");
         } else {
