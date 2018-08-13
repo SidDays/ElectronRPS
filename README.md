@@ -9,3 +9,6 @@ cd ElectronRPS
 npm install
 npm start
 ```
+
+## In Action
+![screenshot](https://user-images.githubusercontent.com/18223888/44045701-3134ef7a-9ede-11e8-8c67-c7787754dfd3.png)
