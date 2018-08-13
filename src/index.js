@@ -57,6 +57,7 @@ document.querySelectorAll(".buttons button").forEach((button) => {
     button.addEventListener("click", (event) => {
         let myMove = button.innerText;
         let aiMove = randomMove();
+        let statusDisplay = document.getElementById("status");
 
         document.getElementById("myMove").innerText = myMove;
         document.getElementById("aiMove").innerText = aiMove;
@@ -65,13 +66,19 @@ document.querySelectorAll(".buttons button").forEach((button) => {
         if (winPlayer == 1) {
             myScore++;
             flashHighlight(myScoreDisplay);
+            statusDisplay.innerText = ("You won this round!");
 
         } else if (winPlayer == -1) {
             aiScore++;
             flashHighlight(aiScoreDisplay);
+            statusDisplay.innerText = ("You lost this round...");
+        } else {
+            flashHighlight(aiScoreDisplay);
+            flashHighlight(myScoreDisplay);
+            statusDisplay.innerText = ("It's a tie.");
         }
 
-        setTimeout(updateScoreDisplay, 300);
+        setTimeout(updateScoreDisplay, 250);
     })
 });
 
@@ -79,5 +86,5 @@ function flashHighlight(winaner) {
     winaner.classList.add("active");
     setTimeout(() => {
         winaner.classList.remove("active");
-    }, 1000);
+    }, 500);
 }

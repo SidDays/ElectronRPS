@@ -41,13 +41,12 @@ body, html {
 }
 
 .scores td {
-  font-family: 'Roboto Mono', 'Andale Mono', 'Consolas', monospace;
   font-weight: 500;
   font-size: 2em;
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 
 .buttons {
@@ -89,5 +88,12 @@ body, html {
 
 .active {
   color: #d3308a;
+}
+
+#status {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #444;
 }
 /*# sourceMappingURL=main.css.map */

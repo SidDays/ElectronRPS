@@ -38,11 +38,10 @@ body, html {
     }
     
     td {
-        font-family: 'Roboto Mono', 'Andale Mono', 'Consolas', monospace;
         font-weight: 500;
         font-size: 2em;
         transition-property: color;
-        transition-duration: 0.5s;
+        transition-duration: 0.25s;
     }
 }
 
@@ -74,4 +73,11 @@ body, html {
 
 .active {
     color: #d3308a;
+}
+
+#status {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #444;
 }
