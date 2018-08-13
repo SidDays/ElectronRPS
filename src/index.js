@@ -62,3 +62,10 @@ document.querySelectorAll(".buttons button").forEach((button) => {
         document.getElementById("aiMove").innerText = aiMove;
     })
 });
+
+function flashHighlight(winaner) {
+    winaner.classList.add("active");
+    setTimeout(() => {
+        winaner.classList.remove("active");
+    }, 1000);
+}

@@ -41,6 +41,8 @@ body, html {
         font-family: 'Roboto Mono', 'Andale Mono', 'Consolas', monospace;
         font-weight: 500;
         font-size: 2em;
+        transition-property: color;
+        transition-duration: 0.5s;
     }
 }
 
@@ -68,4 +70,8 @@ body, html {
             background: linear-gradient(to bottom,#221d53 1%,#8a57a4 100%);
         }
     }
+}
+
+.active {
+    color: #d3308a;
 }
