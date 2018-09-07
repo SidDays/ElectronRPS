@@ -1,7 +1,11 @@
 {
   "name": "electron-sample-app",
   "version": "0.1.0",
-  "description": "",
+  "description": "Sample app made in Electron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sidrk/supplyframe-challenge.git"
+  },
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -9,7 +13,7 @@
   "author": "Siddhesh Rajiv Karekar",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^2.0.7",
+    "electron": "^2.0.8",
     "electron-reload": "^1.2.5"
   }
 }
